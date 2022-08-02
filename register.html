@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style >
+Font-size: 40px;
+text-align:center;
+}
+#button{
+margin-left:740px;}
+
+</STYLE>
+<SCRIPT>
+function show()
+{
+var fname = document.getElementById("txtbox1").value; 
+var lname = document.getElementById("txtbox2").value; 
+var idnumber = document.getElementById("txtbox3").value;
+var age = document.getElementById("age").value;
+var address = document.getElementById("address").value; 
+var gender = document.getElementById("gender").value;
+var subject = document.getElementById("subject").value;
+confirm("You have entered:" + "\n Name : " + fname + " " + lname + "\n idnumber : " + idnumber + "\n Age : " + age + "\n Address : "+ address + "\n Gender : "+ gender + "\n subject matter : " + subject + "\n\n Do you want to confirm these details ?");
+if (window.confirm('If you click "ok" you would finished registration form  . click Cancel to change your data for registration ')) 
+{
+window.location.href="abisregist.html";
+}
+}
+
+function changeColor(val)
+{ 
+ if((val.value=="")||(val.value==null))
+{
+val.style.background="red";
+}
+else
+{
+val.style.background="#FFFFFF";
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY style="background: url(ec.jpg);  background-size : 130% ;"> 
+<center><H1>Registration Form</H1></center><hr>
+<H3>Please Fill In The Registration Form And Be Part Of SHS 69 </H3><BR/><BR/>
+<TABLE align="center" border="2" bordercolor="white" cellpadding="10px" bgcolor="beige">
+<TR>
+<TD>  First  name:  </TD>
+<TD> <INPUT type="text" name="name1" id="txtbox1" onblur="changeColor(this)"/> </TD>
+</TR> <TR>
+<TD>  Last  name:  </TD>
+<TD><INPUT type="text" name="name2" id="txtbox2" onblur="changeColor(this)"/></TD>
+</TR> <TR>
+	<TD> id number: </TD>
+	<TD> <input type="text" name="idnumber" id="txtbox3" onblur="changeColor(this)"/></TD>
+	</TR> <TR>
+<TD>  Age:  </TD>
+<TD> <INPUT type="text" name="age_box" id="age" onblur="changeColor(this)"/> </TD>
+</TR> <TR>
+<TD>  Address:</TD>
+<TD><TEXTAREA rows="5" name="address_box" id="address" onblur="changeColor(this)"></textarea></TD>
+</TR> <TR>
+<TD> Gender: </TD> <TD>
+<SELECT name="Gender" id="gender"> <OPTION value="Male">Male</OPTION> <OPTION value="Female">Female</option> </SELECT> </TD>
+</TR><TR>
+<td> Subject Matter :  </td>
+ <td>Science <input type="radio" id="subject" value="Science"> Social<input type="radio" id="subject" value="Social"> Langguage <input type="radio" id="subject" value="Langguage"></td>
+</TR> </TABLE>
+<BR/>
+<center><INPUT id="button" type="button" value="Register" onclick="show()"/></center>
+</BODY>
+</HTML>
